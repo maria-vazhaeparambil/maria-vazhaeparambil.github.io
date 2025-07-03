@@ -43,7 +43,6 @@ CREATE TABLE puzzle_list (
 -- Insert puzzle data
 INSERT INTO puzzle_list(puzzle_name, puzzle_img, puzzle_url, solver_url, puzzle_type, playsolve) VALUES
 ("Connect 4", "imgs/connect4-icon.png", "connect4/connect4.html", NULL, "two-player", FALSE),
-("Crossword", "imgs/crossword-icon.png", "crossword/crossword.html", NULL, "word", FALSE),
 ("Memory Game", "imgs/memory-icon.png", "memory/memory.html", NULL, "two-player", FALSE),
 ("Minesweeper", "imgs/minesweeper-icon.png", "minesweeper/minesweeper.html", "minesweeper/minesweeper-solver.html", "logic", TRUE),
 ("Sliding Game", "imgs/sliding-icon.png", "sliding/sliding.html", NULL, "logic", FALSE),
