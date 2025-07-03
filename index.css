@@ -161,8 +161,7 @@ footer {
 }
 
 .pub-card img {
-  width: 60px;
-  height: 60px;
+  width: 240px;
   object-fit: contain;
   border-radius: 8px;
 }
