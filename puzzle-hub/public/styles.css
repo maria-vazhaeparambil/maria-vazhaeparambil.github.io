@@ -179,7 +179,7 @@ nav a, .button {
   display: none;
 }
 
-.footer.button {
+#footer.button {
   position: absolute;
   right: 1em;
   bottom: 1em;
@@ -191,6 +191,6 @@ nav a, .button {
   cursor: pointer;
 }
 
-.footer.button:hover {
+#footer.button:hover {
   background-color: #3a73cc;
 }
