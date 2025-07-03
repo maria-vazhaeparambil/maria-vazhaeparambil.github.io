@@ -179,10 +179,18 @@ nav a, .button {
   display: none;
 }
 
+#footer {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #f1f1f1;
+  font-size: 0.9em;
+  position: relative;
+}
+
 #footer .button {
   position: absolute;
   right: 1em;
-  bottom: 1em;
   padding: 0.5em 1em;
   background-color: #4b8cff;
   color: white;
