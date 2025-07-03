@@ -178,3 +178,19 @@ nav a, .button {
 .button-row.hidden{
   display: none;
 }
+
+.footer-button {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  padding: 0.5em 1em;
+  background-color: #4b8cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-button:hover {
+  background-color: #3a73cc;
+}
