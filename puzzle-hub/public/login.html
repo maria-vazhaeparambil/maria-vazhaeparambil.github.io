@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- 
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This HTML file is used for the login page of the Puzzle Hub application.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puzzle Hub - Login</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="game-styles.css"/>
+  <script defer src="login.js"></script>
+</head>
+<body>
+  <main>
+    <div class="login-container">
+      <h2>Login to Puzzle Hub</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <div class="button-row">
+          <nav>
+            <a href="index.html" class="button">← Back to Hub</a>
+          </nav>
+          <button type="submit" class="button">Login</button>
+        </div>
+      </form>
+      <p id="loginMessage"></p>
+      <p class="signup-link">
+        Don't have a user? <a href="create-user.html">Create one here</a>.
+      </p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the sliding.html file for the Sliding Puzzle game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sliding Puzzle Game</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="sliding.css" />
+  <script defer src="sliding.js"></script>
+</head>
+<body>
+  <h1>4x4 Sliding Puzzle</h1>
+  <section id="howto">
+    <h2>How to Play</h2>
+    <p>
+      The Sliding Puzzle (also known as the 15 Puzzle) is a classic single-player game played on a 4x4 grid with 15 numbered tiles and one empty space.
+    </p>
+    <ul>
+      <li>Click a tile adjacent to the empty space to slide it into that space.</li>
+      <li>The goal is to arrange the tiles in order from 1 to 15, with the empty space in the bottom-right corner.</li>
+      <li>Use logic and strategy to minimize your number of moves.</li>
+      <li>Click the "Shuffle" button to start a new random puzzle.</li>
+    </ul>
+    <p>Try to solve the puzzle in as few moves as possible. Good luck!</p>
+  </section>
+  
+  <div class="button-row" id="row1">
+    <nav>
+      <a href="../index.html"> &#8592; Back to Menu</a>
+      <a href="#" id="button1"> Continue &#x2192;</a>
+    </nav>
+  </div>
+  <p id="move-counter" class="hidden">Moves: 0</p>
+  <div id="puzzle-container" class="hidden"></div>
+  <div class="button-row hidden" id="row2">
+    <nav>
+      <a href="#" id="button2">Back to Hub</a>
+      <a href="#" id="button3">Play Again &#8634;</a>
+    </nav>
+  </div>
+  <p id="win-message" class="hidden">🎉 You solved it!</p>
+</body>
+</html>

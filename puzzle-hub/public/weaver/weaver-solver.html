@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the weaver-solver.html file for the Weaver Solver page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weaver Solver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="weaver-styles.css" />
+  <script defer src="weaver-solver.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Weaver Solver</h1>
+    <section>
+      <label for="start-word">Start Word:</label>
+      <input type="text" id="start-word" maxlength="4" />
+
+      <label for="end-word">End Word:</label>
+      <input type="text" id="end-word" maxlength="4" />
+    </section>
+
+    <div id="message-area" class="hidden"></div>
+
+    <section class="weaver-grid hidden"></section>
+    
+    <div class="button-row">
+        <nav>
+          <a href="../index.html"> &#8592; Back to Hub</a>
+          <a href="#" class="button" id="solve-btn"> Solve</a>
+        </nav>
+    </div>
+
+    <div id="footer">
+     © 2025 | Words from <a href="https://gist.github.com/raspberrypisig" target="_blank">raspberrypisig</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/*
+ * Author: Maria Vazhaeparambil
+ * CS 132 Spring 2025
+ * Date: June 6, 2025
+ *
+ * This is the tictactoe-styles.css file for the Tic Tac Toe game.
+ */
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border: 2px solid #666;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover {
+  background: #e0e0e0;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#game-board.hidden {
+  display: none;
+}

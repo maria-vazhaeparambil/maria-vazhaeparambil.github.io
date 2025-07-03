@@ -1,0 +1,61 @@
+/*
+ * Author: Maria Vazhaeparambil
+ * CS 132 Spring 2025
+ * Date: June 6, 2025
+ *
+ * This is the memory.css file for the Memory game.
+ */
+
+#game-controls {
+  margin-bottom: 20px;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  background-color: #ddd;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #666;
+  user-select: none;
+}
+
+.card.flipped {
+  background-color: #eee;
+}
+
+.card.matched {
+  background-color: lightgreen;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  padding: 10px 1px;
+  background-color: #f0f0f0;
+  border-top: 2px solid #ccc;
+}
+
+#player1-score, #player2-score, #turn-indicator {
+  flex: 1;
+  text-align: center;
+}
+
+#game-board.hidden, .scoreboard.hidden {
+  display: None;
+}

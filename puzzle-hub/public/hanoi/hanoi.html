@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the hanoi.html file for the Tower of Hanoi game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tower of Hanoi</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="hanoi.css" />
+
+  <script src="hanoi.js" defer></script>
+</head>
+<body>
+  <h1>Tower of Hanoi</h1>
+
+  <section id="howto">
+    <h2>How to Play</h2>
+    <p>
+      Tower of Hanoi is a classic logic puzzle game where your goal is to move all the disks from the first tower to the third tower in the correct order.
+    </p>
+    <ul>
+      <li>Click "Play Game" to begin with a set of disks stacked on the first tower.</li>
+      <li>You can only move one disk at a time.</li>
+      <li>Only the top disk of any tower can be moved.</li>
+      <li>You may not place a larger disk on top of a smaller one.</li>
+      <li>Use drag and drop to move disks between towers.</li>
+    </ul>
+    <p>
+      Try to complete the puzzle in the fewest number of moves. Think ahead and plan your moves carefully!
+    </p>
+  </section>
+
+  <div class="button-row" id = "row1">
+    <nav>
+      <a href="../index.html"> &#8592; Back to Menu</a>
+      <a href="#" id = "button1"> Continue &#x2192;</a>
+    </nav>
+  </div>
+  
+  <section id="game-message" class = "hidden">Move all disks to the third tower</section>
+
+  <div id="setup" class = "hidden">
+    <label for="disk-count">Number of Disks:</label>
+    <input type="number" id="disk-count" min="3" max="10" value="5" />
+  </div>
+
+  <section id="game-section" class = "hidden">
+    <div id="towers-container">
+      <div class="tower" id="tower-0"></div>
+      <div class="tower" id="tower-1"></div>
+      <div class="tower" id="tower-2"></div>
+    </div>
+    <p id="move-counter">Moves: 0</p>
+  </section>
+
+  <div class="button-row hidden" id="row2">
+    <nav>
+      <a href="#" id="button2">Back to Hub</a>
+      <a href="#" id="button3">Play Again &#8634;</a>
+    </nav>
+  </div>
+</body>
+</html>

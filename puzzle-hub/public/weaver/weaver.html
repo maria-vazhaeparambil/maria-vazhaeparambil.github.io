@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the weaver.html file for the Weaver game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Play Weaver</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="weaver-styles.css" />
+
+  <script defer src="weaver.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Weaver Game</h1>
+    </header>
+
+    <section id = "howto">
+      <h2>How to Play</h2>
+      <p>Transform the start word into the end word in as few steps as possible.</p>
+      <ul>
+        <li>Each word must be a valid 4-letter English word.</li>
+        <li>You can only change one letter at a time.</li>
+        <li>Each intermediate step must also be a valid word.</li>
+        <li>Reach the target word to win!</li>
+      </ul>
+    </section>
+
+    <section id = "examples">
+      <h2>Example</h2>
+      <p>Goal: Transform <strong>COLD</strong> into <strong>WARM</strong></p>
+
+      <div class="example-grid">
+        <div class="row">
+          <div class="tile"> C </div>
+          <div class="tile"> O </div>
+          <div class="tile"> L </div>
+          <div class="tile"> D </div>
+        </div>
+        <div class="row">
+          <div class="tile"> C </div>
+          <div class="tile"> O </div>
+          <div class="tile correct"> R </div>
+          <div class="tile"> D </div>
+        </div>
+        <div class="row">
+          <div class="tile"> C </div>
+          <div class="tile correct"> A </div>
+          <div class="tile correct"> R </div>
+          <div class="tile"> D </div>
+        </div>
+        <div class="row">
+          <div class="tile correct"> W </div>
+          <div class="tile correct"> A </div>
+          <div class="tile correct"> R </div>
+          <div class="tile"> D </div>
+        </div>
+        <div class="row">
+          <div class="tile correct"> W </div>
+          <div class="tile correct"> A </div>
+          <div class="tile correct"> R </div>
+          <div class="tile correct"> M </div>
+        </div>
+      </div>
+
+      <p>Only one letter changes at each step, and each is a valid word.</p>
+    </section>
+
+    <div class="button-row" id = "row1">
+      <nav>
+        <a href="../index.html"> &#8592; Back to Menu</a>
+        <a href="#" id = "button1"> Continue &#x2192; </a>
+      </nav>
+    </div>
+
+    <div id="message-area" class="hidden"></div>
+
+    <section class = "weaver-grid hidden">
+    </section>
+
+    <div class="button-row hidden" id = "row2">
+      <nav>
+        <a href="../index.html" id = "button2"> &#8592; Back to Hub</a>
+        <a href="#" class="button" id="button3"> Play Again &#8634;</a>
+      </nav>
+    </div>
+  </main>
+
+  <div id="footer">
+    © 2025 | Words from <a href="https://gist.github.com/raspberrypisig" target="_blank">raspberrypisig</a>
+  </div>
+  
+</body>
+</html>

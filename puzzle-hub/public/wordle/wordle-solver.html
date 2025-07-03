@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the wordle-solver.html file for the Wordle Solver page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wordle Solver</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="wordle-styles.css" />
+  <script defer src="wordle-solver.js"></script>
+</head>
+<body>
+  <h1>Wordle Solver</h1>
+  
+  <form id="solver-form">
+    <div id="input-rows">
+      <!-- 6 rows of inputs for 5 letters each -->
+      <!-- Each row input: letter + color select (correct/present/absent) -->
+      <!-- We'll generate this via JS for cleaner code -->
+    </div>
+  </form>
+
+  <div class="solution-box" id="results" aria-live="polite" aria-label="Possible solutions">
+    <!-- Solutions will appear here -->
+  </div>
+
+  <div class="button-row">
+    <nav>
+      <a href="../index.html"> &#8592; Back to Hub</a>
+      <a href="#" class="button" id="solve-btn"> Solve</a>
+    </nav>
+</div>
+</body>
+</html>

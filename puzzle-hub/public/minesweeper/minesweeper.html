@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the minesweeper.html file for the Minesweeper game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minesweeper Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="minesweeper.css" />
+  <script defer src="minesweeper.js"></script>
+</head>
+<body>
+  <h1>Minesweeper</h1>
+
+  <section id="howto">
+    <h2>How to Play</h2>
+    <p>
+      Minesweeper is a single-player puzzle game where your goal is to uncover all non-mine cells on a grid without clicking on a mine.
+    </p>
+    <ul>
+      <li>Choose a board size to start the game. The number of hidden mines will be based on the board size.</li>
+      <li>Left-click a cell to reveal it. If it's a mine, the game ends!</li>
+      <li>Numbers indicate how many mines are adjacent to that cell (including diagonals).</li>
+      <li>If you think a cell contains a mine, right-click to flag it. Flags help you avoid accidental clicks.</li>
+      <li>Clear all safe cells to win the game!</li>
+    </ul>
+    <p>Use logic and deduction to safely clear the board. Good luck!</p>
+  </section>
+    
+  <div class="button-row" id="row1">
+    <nav>
+      <a href="../index.html"> &#8592; Back to Menu</a>
+      <a href="#" id="button1"> Continue &#x2192;</a>
+    </nav>
+  </div>
+
+  <section id="game-message" class="hidden">Enter a board size!</section>
+
+  <div id="setup" class="hidden">
+    <label for="size-input">Board Size:</label>
+    <input type="number" id="size-input" min="5" max="20" value="8" />
+  </div>
+
+  <section id="game-board" class="hidden"></section>
+
+  <div class="button-row hidden" id="row2">
+    <nav>
+      <a href="#" id="button2">Back to Hub</a>
+      <a href="#" id="button3">Play Again &#8634;</a>
+    </nav>
+  </div>
+</body>
+</html>

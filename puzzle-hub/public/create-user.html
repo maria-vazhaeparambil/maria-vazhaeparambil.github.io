@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This HTML file is used for creating a new user in the Puzzle Hub application.
+  It includes a form for entering a username and password, with an option to request admin privileges.
+  The form submission is handled by the create-user.js script.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puzzle Hub - Login</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="game-styles.css"/>
+  <script defer src="create-user.js"></script>
+</head>
+<body>
+  <main>
+    <div class="login-container">
+      <h2>Create User for Puzzle Hub</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        
+        <div class="checkbox-row">
+          <input type="checkbox" id="requestAdmin" name="requestAdmin" />
+          <label for="requestAdmin">Request admin privileges</label>
+        </div>
+        
+        <div class="button-row">
+          <nav>
+              <a href="index.html" class="button">← Back to Hub</a>
+          </nav>
+          <button type="submit" class="button">Create User</button>
+        </div>
+      </form>
+      
+      <p id="loginMessage"></p>
+    </div>
+  </main>
+</body>
+</html>

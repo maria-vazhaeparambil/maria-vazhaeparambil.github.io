@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the sudoku.html file for the Sudoku game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Play Sudoku</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="sudoku-styles.css" />
+
+  <script defer src="sudoku.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Sudoku Game</h1>
+    </header>
+
+    <section id = "howto">
+      <h2>How to Play</h2>
+        <ul>
+          <li> Fill each <strong>3 × 3 set</strong> with numbers 1–9. </li>
+          <li>Tap a cell in any set, then select a number.</li>
+          <li>Fill cells until the board is complete. Numbers in sets, rows, or columns cannot repeat.</li>
+          <li><strong>Note:</strong> Each number can only appear on the board 9 times.</li>
+        </ul>
+    </section>
+        
+    <section id = "examples">
+      <h2>Play Modes and Tips</h2>
+        <ul>
+          <li><strong>Normal mode:</strong> Add 1 number to a cell.</li>
+          <li><strong>Candidate mode:</strong> Add several numbers to a cell (for multiple options).</li>
+          <li><strong>Need a clue?</strong> Tap <strong>"Hint"</strong> to see the next logical cell to solve.</li>
+          <li>Choose from 3 levels — easy, medium, and hard. To change levels, tap <strong>"Back"</strong> in the toolbar.</li>
+        </ul>
+    </section>
+      
+    <div class="button-row" id="row1">
+      <nav>
+        <a href="../index.html"> &#8592; Back to Menu</a>
+        <a href="#" id="button1"> Continue &#x2192;</a>
+      </nav>
+    </div>
+
+    <div id="message-area" class="hidden">
+      <h2>You Win!</h2>
+    </div>
+
+    <section class="sudoku-grid hidden">
+      <!-- 9 rows, each with 9 cells -->
+      <div class="sudoku-row">
+        <div class="cell" id="box-0-0"></div><div class="cell" id="box-0-1"></div><div class="cell" id="box-0-2"></div>
+        <div class="cell" id="box-0-3"></div><div class="cell" id="box-0-4"></div><div class="cell" id="box-0-5"></div>
+        <div class="cell" id="box-0-6"></div><div class="cell" id="box-0-7"></div><div class="cell" id="box-0-8"></div>
+      </div>
+      <div class="sudoku-row">
+        <div class="cell" id="box-1-0"></div><div class="cell" id="box-1-1"></div><div class="cell" id="box-1-2"></div>
+        <div class="cell" id="box-1-3"></div><div class="cell" id="box-1-4"></div><div class="cell" id="box-1-5"></div>
+        <div class="cell" id="box-1-6"></div><div class="cell" id="box-1-7"></div><div class="cell" id="box-1-8"></div>
+      </div>
+      <div class="sudoku-row">
+        <div class="cell" id="box-2-0"></div><div class="cell" id="box-2-1"></div><div class="cell" id="box-2-2"></div>
+        <div class="cell" id="box-2-3"></div><div class="cell" id="box-2-4"></div><div class="cell" id="box-2-5"></div>
+        <div class="cell" id="box-2-6"></div><div class="cell" id="box-2-7"></div><div class="cell" id="box-2-8"></div>
+      </div>
+    
+      <div class="sudoku-row">
+        <div class="cell" id="box-3-0"></div><div class="cell" id="box-3-1"></div><div class="cell" id="box-3-2"></div>
+        <div class="cell" id="box-3-3"></div><div class="cell" id="box-3-4"></div><div class="cell" id="box-3-5"></div>
+        <div class="cell" id="box-3-6"></div><div class="cell" id="box-3-7"></div><div class="cell" id="box-3-8"></div>
+      </div>
+      <div class="sudoku-row">
+        <div class="cell" id="box-4-0"></div><div class="cell" id="box-4-1"></div><div class="cell" id="box-4-2"></div>
+        <div class="cell" id="box-4-3"></div><div class="cell" id="box-4-4"></div><div class="cell" id="box-4-5"></div>
+        <div class="cell" id="box-4-6"></div><div class="cell" id="box-4-7"></div><div class="cell" id="box-4-8"></div>
+      </div>
+      <div class="sudoku-row">
+        <div class="cell" id="box-5-0"></div><div class="cell" id="box-5-1"></div><div class="cell" id="box-5-2"></div>
+        <div class="cell" id="box-5-3"></div><div class="cell" id="box-5-4"></div><div class="cell" id="box-5-5"></div>
+        <div class="cell" id="box-5-6"></div><div class="cell" id="box-5-7"></div><div class="cell" id="box-5-8"></div>
+      </div>
+
+      <div class="sudoku-row">
+        <div class="cell" id="box-6-0"></div><div class="cell" id="box-6-1"></div><div class="cell" id="box-6-2"></div>
+        <div class="cell" id="box-6-3"></div><div class="cell" id="box-6-4"></div><div class="cell" id="box-6-5"></div>
+        <div class="cell" id="box-6-6"></div><div class="cell" id="box-6-7"></div><div class="cell" id="box-6-8"></div>
+      </div>
+      <div class="sudoku-row">
+        <div class="cell" id="box-7-0"></div><div class="cell" id="box-7-1"></div><div class="cell" id="box-7-2"></div>
+        <div class="cell" id="box-7-3"></div><div class="cell" id="box-7-4"></div><div class="cell" id="box-7-5"></div>
+        <div class="cell" id="box-7-6"></div><div class="cell" id="box-7-7"></div><div class="cell" id="box-7-8"></div>
+      </div>
+      <div class="sudoku-row">
+        <div class="cell" id="box-8-0"></div><div class="cell" id="box-8-1"></div><div class="cell" id="box-8-2"></div>
+        <div class="cell" id="box-8-3"></div><div class="cell" id="box-8-4"></div><div class="cell" id="box-8-5"></div>
+        <div class="cell" id="box-8-6"></div><div class="cell" id="box-8-7"></div><div class="cell" id="box-8-8"></div>
+      </div>
+    </section>
+
+    <section class="keyboard hidden">
+      <div class="keyboard-row">
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="key"> </button>
+      </div>
+    </section>
+
+    <div class="button-row hidden" id="row2">
+      <nav>
+        <a href="#" id="button2"> &#8592; Back to Hub</a>
+        <a href="#" class="button" id="button3"> Play Again &#8634;</a>
+      </nav>
+    </div>
+
+  </main>
+</body>
+</html>
+

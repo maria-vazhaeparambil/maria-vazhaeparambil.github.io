@@ -1,0 +1,54 @@
+/*
+ * Author: Maria Vazhaeparambil
+ * CS 132 Spring 2025
+ * Date: June 6, 2025
+ *
+ * This is the weaver-styles.css file for the Weaver game.
+ */
+
+.example-grid, .weaver-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0.5rem auto;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;  
+  border: 2px solid #666;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+.row .tile.correct {
+  background: #6aaa64; /* Wordle green */
+  color: white;
+  border: 2px solid #666;
+}
+
+#message-area {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #444;
+  border-radius: 5px;
+  margin: 10px auto;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.example-grid.hidden, .weaver-grid.hidden, #message-area.hidden {
+  display: none;
+}

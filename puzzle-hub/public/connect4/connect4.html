@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the connect4.html for the Connect 4 game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connect 4 Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="connect4.css" />
+  
+  <script defer src="connect4.js"></script>
+</head>
+<body>
+  <h1>Connect 4</h1>
+
+  <section id="howto">
+    <h2>How to Play</h2>
+    <p>Connect 4 is a two-player game where players take turns dropping colored discs into a 7-column grid. The first player to connect four of their pieces horizontally, vertically, or diagonally wins.</p>
+  </section>
+    
+  <div class="button-row" id="row1">
+    <nav>
+      <a href="../index.html"> &#8592; Back to Hub</a>
+      <a href="#" id="button1"> Continue &#x2192;</a>
+    </nav>
+  </div>
+
+  <section id="game-message" class="hidden">Player 1's turn (Red)</section>
+
+  <section id="game-board"  class="hidden"></section>
+
+  <div class="button-row hidden" id="row2">
+    <nav>
+      <a href="#" id="button2"> Back to Hub</a>
+      <a href="#" id="button3">Play Again &#8634;</a>
+    </nav>
+  </div>
+</body>
+</html>

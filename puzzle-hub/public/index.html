@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the index.html file for the Puzzle Hub homepage.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puzzle Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <header class="top-bar">
+    <a href="login.html" class="login-button button">Login</a>
+    <h1 class="page-title">Puzzle Hub &#x1F9E9;</h1>
+  </header>
+
+  <main>
+    <p>Welcome! Choose a puzzle below:</p>
+
+    <div class="filter-bar">
+      <label for="filter">Filter:</label>
+      <select id="filter" name="filter">
+        <option value="all">All</option>
+        <option value="logic">Logic</option>
+        <option value="word">Word</option>
+        <option value="two-player">Two Player</option>
+      </select>
+    </div>
+
+    <h2>Play</h2>
+    <section class="game-list" id="play-list">
+      <!-- Puzzles that can be played will be inserted here -->
+    </section>
+
+    <h2 id="solve-heading" class="hidden">Solve</h2>
+    <section class="game-list hidden" id="solve-list">
+      <!-- Puzzles that can be solved will be inserted here -->
+    </section>
+  </main>
+
+   <div id="footer">
+    © 2025 | <a href="citations.html">Image Citations</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+  Author: Maria Vazhaeparambil
+  CS 132 Spring 2025
+  Date: June 6, 2025
+
+  This is the memory.html file for the Memory Card Game page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../game-styles.css" />
+  <link rel="stylesheet" href="memory.css" />
+
+  <script defer src="memory.js"></script>
+</head>
+<body>
+  <h1>Memory Card Game</h1>
+
+  <section id="howto">
+    <h2>How to Play</h2>
+    <p>Select the number of pairs you want to play with and click "Start Game". Click on two cards to reveal their values. If they match, they stay visible. If not, they are hidden again. Try to match all pairs using the fewest number of attempts.</p>
+  </section>
+    
+  <div class="button-row" id="row1">
+    <nav>
+      <a href="../index.html"> &#8592; Back to Menu</a>
+      <a href="#" id="button1"> Continue &#x2192;</a>
+    </nav>
+  </div>
+
+  <form id="settings-form" class="hidden">
+    <label for="pairCount">Number of Pairs (Max 10):</label>
+    <input type="number" id="pairCount" name="pairCount" min="2" max="10" value="4" />
+  </form>
+
+  <section id="game-board" class="hidden"></section>
+
+  <footer class="scoreboard hidden">
+    <div id="player1-score">Player 1: 0</div>
+    <div id="turn-indicator">Turn: Player 1</div>
+    <div id="player2-score">Player 2: 0</div>
+  </footer>
+  
+
+  <div class="button-row hidden" id="row2">
+    <nav>
+      <a href="#" id="button2"> &#8592; Back to Hub</a>
+      <a href="#" id="button3"> Play Again &#8634;</a>
+    </nav>
+  </div>
+
+</body>
+</html>

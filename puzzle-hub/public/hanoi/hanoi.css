@@ -1,0 +1,59 @@
+/*
+ * Author: Maria Vazhaeparambil
+ * CS 132 Spring 2025
+ * Date: June 6, 2025
+ *
+ * This is the hanoi.css file for the Towers of Hanoi game.
+ */
+
+#setup {
+  margin-bottom: 20px;
+}
+
+#towers-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+  margin-top: 80px;
+  height: 200px;
+}
+
+.tower {
+  background-color: #ccc;
+  width: 120px;
+  height: 100%;
+  border: 2px solid #888;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.disk {
+  height: 20px;
+  background-color: #4a90e2;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: grab;
+  transition: width 0.3s;
+}
+
+/* Disk width based on data-size attribute */
+.disk[data-size="1"] { width: 10px; }
+.disk[data-size="2"] { width: 20px; }
+.disk[data-size="3"] { width: 30px; }
+.disk[data-size="4"] { width: 40px; }
+.disk[data-size="5"] { width: 50px; }
+.disk[data-size="6"] { width: 60px; }
+.disk[data-size="7"] { width: 70px; }
+.disk[data-size="8"] { width: 80px; }
+.disk[data-size="9"] { width: 90px; }
+.disk[data-size="10"] { width: 100px; }
+
+#move-counter {
+  margin-top: 15px;
+  font-weight: bold;
+}
+  

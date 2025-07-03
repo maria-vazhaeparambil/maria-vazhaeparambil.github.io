@@ -1,0 +1,42 @@
+/*
+ * Author: Maria Vazhaeparambil
+ * CS 132 Spring 2025
+ * Date: June 6, 2025
+ *
+ * This is the connect4.css file for the Connect 4 game.
+ */
+ 
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-gap: 5px;
+  margin: 20px auto;
+  max-width: 440px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  border: 2px solid #555;
+  cursor: pointer;
+}
+
+.cell.red {
+  background-color: red;
+}
+
+.cell.yellow {
+  background-color: gold;
+}
+
+#game-message {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+#game-board.hidden {
+  display: None;
+}

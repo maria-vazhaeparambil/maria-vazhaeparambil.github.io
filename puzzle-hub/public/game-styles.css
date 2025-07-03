@@ -1,0 +1,59 @@
+/*
+ * Author: Maria Vazhaeparambil
+ * CS 132 Spring 2025
+ * Date: June 6, 2025
+ *
+ * This is the game-styles.css file for all games.
+ */
+
+h2 {
+  text-align: center;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.keyboard-row button {
+  min-width: 40px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #d3d6da;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.keyboard-row button:hover {
+  background-color: #b5b8bb;
+}
+
+.keyboard-row .wide {
+  min-width: 60px;
+}
+
+#message-area {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #444;
+  border-radius: 5px;
+  margin: 10px auto;
+  width: fit-content;
+  max-width: 80%;
+}
+
+#message-area.hidden, #howto.hidden, #examples.hidden {
+  display: none;
+}

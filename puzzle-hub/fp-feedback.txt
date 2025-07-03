@@ -1,0 +1,35 @@
+1. What is your estimated grade for the Final Project (roughly of 100)? For partner projects,
+   do you think the workload distribution was fair?
+   Estimated Grade: 96/100
+   I believe the implementation of multiple games (Sudoku, Wordle, and architecture for expanding PuzzleHub) 
+   met most of the project goals. The core functionality works well, and I focused on usability, styling, and 
+   modularity. There may be a few refinements or polish items left, but overall I’m proud of the depth and 
+   interactivity.
+
+2. What is your estimated grade for the course (letter grade)? You can support your
+   estimate with examples of demonstrated engagement in the course material, strengths
+   (and weaknesses) over the term, and growth throughout the material (some assignment
+   grading feedback was delayed, but we would like to know what resources you used to
+   iterate on the material, such as lectures, OH, Discord, etc.)
+   Estimated Course Grade: A+
+   Throughout the quarter, I’ve consistently engaged with the material and completed all the homeworks and 
+   engagement opportunities. I’ve grown more confident in using HTML/CSS/JS together for interactive projects. 
+   I made regular use of office hours to improve both small bug fixes and architectural decisions. My biggest
+   area of growth has been in understanding JavaScript DOM manipulation and modular structuring of projects.
+
+3. To what extent would you like feedback in your project (e.g. thorough, particular areas of the
+   project, or just a grade)?
+   I would appreciate medium feedback. Specifically, I'd love to know how I could better architect the codebase 
+   for extensibility (adding more functionality to the hub in the future), and any UI/UX feedback on the game 
+   that would make a more efficient and easier to use interface.
+
+4. Anything else you would like El to know when grading?
+   I tried to challenge myself by designing a reusable hub that can grow in the future, rather than building 
+   just one game. Even though that increased my workload and required more structural design early on, I think it
+   made the project more rewarding and demonstrates how I’ve synthesized the course’s frontend principles. Additionally,
+   due to time constraints I was unable to finish the Crossword puzzle and the Minesweeper Solver, but I hope to add 
+   these in the future.
+
+5. Are you open to sharing your project/reflection for future terms? If so, would you
+   like named credit or anonymous?
+   Yes, I’m open to sharing, and named credit is okay.
