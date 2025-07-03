@@ -193,7 +193,7 @@ footer {
     align-items: flex-start;
   }
 
-  .pub-card img {
+  .pub-card img, .project-card img {
     width: 100%;
     height: auto;
   }
