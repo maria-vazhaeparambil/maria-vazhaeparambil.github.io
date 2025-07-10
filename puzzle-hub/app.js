@@ -38,16 +38,21 @@ app.use((req, res, next) => {
 const SERVER_ERR_CODE = 500;
 const SERVER_ERROR = "Server is currently down. Please try again later.";
 
+const fs = require("fs");
 const bcrypt = require("bcrypt"); // assuming you hash passwords
 
 async function getDB() {
   try {
     const db = await mysql.createConnection({
-      host: "mysql-portfolio-maria-portfolio.f.aivencloud.com",
-      port: 11450,
-      user: "avnadmin",
-      password: "AVNS_DaeTomDLKg1yDjDcXcl",
-      database: "defaultdb"
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      ssl: {
+        rejectUnauthorized: true,
+        ca: fs.readFileSync("ca.pem")
+      }
     });
     return db;
   } catch (err) {
