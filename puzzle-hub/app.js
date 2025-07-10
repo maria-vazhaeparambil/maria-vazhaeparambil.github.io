@@ -43,11 +43,11 @@ const bcrypt = require("bcrypt"); // assuming you hash passwords
 async function getDB() {
   try {
     const db = await mysql.createConnection({
-      host: "localhost",
-      port: 3306,
-      user: "root",
-      password: "root",
-      database: "puzzledb"
+      host: "mysql-portfolio-maria-portfolio.f.aivencloud.com",
+      port: 11450,
+      user: "avnadmin",
+      password: "AVNS_DaeTomDLKg1yDjDcXcl",
+      database: "defaultdb"
     });
     return db;
   } catch (err) {

@@ -42,12 +42,12 @@ CREATE TABLE puzzle_list (
 
 -- Insert puzzle data
 INSERT INTO puzzle_list(puzzle_name, puzzle_img, puzzle_url, solver_url, puzzle_type, playsolve) VALUES
-("Connect 4", "imgs/connect4-icon.png", "connect4/connect4.html", NULL, "two-player", FALSE),
-("Memory Game", "imgs/memory-icon.png", "memory/memory.html", NULL, "two-player", FALSE),
-("Minesweeper", "imgs/minesweeper-icon.png", "minesweeper/minesweeper.html", "minesweeper/minesweeper-solver.html", "logic", TRUE),
-("Sliding Game", "imgs/sliding-icon.png", "sliding/sliding.html", NULL, "logic", FALSE),
-("Sudoku", "imgs/sudoku-icon.png", "sudoku/sudoku.html", "sudoku/sudoku-solver.html", "logic", TRUE),
-("Tic Tac Toe", "imgs/tictactoe-icon.png", "tictactoe/tictactoe.html", NULL, "two-player", FALSE),
-("Tower of Hanoi", "imgs/tower-icon.png", "hanoi/hanoi.html", NULL, "logic", FALSE),
-("Weaver", "imgs/weaver-icon.png", "weaver/weaver.html", "weaver/weaver-solver.html", "word", TRUE),
-("Wordle", "imgs/wordle-icon.png", "wordle/wordle.html", "wordle/wordle-solver.html", "word", TRUE);
+('Connect 4', 'imgs/connect4-icon.png', 'connect4/connect4.html', NULL, 'two-player', FALSE),
+('Memory Game', 'imgs/memory-icon.png', 'memory/memory.html', NULL, 'two-player', FALSE),
+('Minesweeper', 'imgs/minesweeper-icon.png', 'minesweeper/minesweeper.html', 'minesweeper/minesweeper-solver.html', 'logic', TRUE),
+('Sliding Game', 'imgs/sliding-icon.png', 'sliding/sliding.html', NULL, 'logic', FALSE),
+('Sudoku', 'imgs/sudoku-icon.png', 'sudoku/sudoku.html', 'sudoku/sudoku-solver.html', 'logic', TRUE),
+('Tic Tac Toe', 'imgs/tictactoe-icon.png', 'tictactoe/tictactoe.html', NULL, 'two-player', FALSE),
+('Tower of Hanoi', 'imgs/tower-icon.png', 'hanoi/hanoi.html', NULL, 'logic', FALSE),
+('Weaver', 'imgs/weaver-icon.png', 'weaver/weaver.html', 'weaver/weaver-solver.html', 'word', TRUE),
+('Wordle', 'imgs/wordle-icon.png', 'wordle/wordle.html', 'wordle/wordle-solver.html', 'word', TRUE);
