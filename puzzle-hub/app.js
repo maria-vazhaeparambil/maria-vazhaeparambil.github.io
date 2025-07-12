@@ -22,7 +22,7 @@ const DEBUG = false;
 
 "use strict";
 const express = require("express");
-const mysql = require("promise-mysql");
+const mysql = require("mysql2/promise");
 
 const app = express();
 app.use(express.static("public"));
