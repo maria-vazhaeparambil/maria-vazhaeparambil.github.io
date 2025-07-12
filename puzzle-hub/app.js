@@ -78,11 +78,11 @@ app.get("/puzzle_list", async (req, res, next) => {
     console.log("Fetching puzzle list");
     db = await getDB();
     let qry = "SELECT * FROM puzzle_list";
-    let rows = await db.execute(qry);
+    let [rows] = await db.execute(qry);
     let jsonResponse = rows.map(row => {
       return {"puzzle_name": row.puzzle_name, "puzzle_img": row.puzzle_img, 
               "puzzle_url": row.puzzle_url, "solver_url": row.solver_url, 
-              "puzzle_type": row.puzzle_type, "play_solve": Number(row.playsolve)};
+              "puzzle_type": row.puzzle_type, "play_solve": row.playsolve};
       
     });
     res.json(jsonResponse);
@@ -111,7 +111,7 @@ app.get("/puzzle_info", async (req, res) => {
 
   try {
     db = await getDB();
-    const rows = await db.query("SELECT * FROM puzzle_list WHERE puzzle_name = ?", [puzzle_name]);
+    const [rows] = await db.execute("SELECT * FROM puzzle_list WHERE puzzle_name = ?", [puzzle_name]);
 
     if (rows.length === 0) {
       return res.status(404).json({ msg: "Puzzle not found" });
@@ -153,7 +153,7 @@ app.get("/in_progress_games", async (req, res) => {
 
   try {
     db = await getDB();
-    let rows = await db.query(
+    let [rows] = await db.execute(
       "SELECT puzzle_name FROM puzzle_sessions WHERE username = ?",
       [username]
     ); 
@@ -190,7 +190,7 @@ app.get("/clicked_puzzle_session", async (req, res) => {
   try {
     db = await getDB();
 
-    const rows = await db.query(
+    const [rows] = await db.execute(
       "SELECT game_data FROM puzzle_sessions WHERE username = ? AND puzzle_name = ?",
       [username, puzzle_name]
     );
@@ -201,7 +201,7 @@ app.get("/clicked_puzzle_session", async (req, res) => {
 
     const gameData = rows[0].game_data;
 
-    await db.query(
+    await db.execute(
       "DELETE FROM puzzle_sessions WHERE username = ? AND puzzle_name = ?",
       [username, puzzle_name]
     );
@@ -234,7 +234,7 @@ app.post("/login", async (req, res) => {
   try {
     db = await getDB();
 
-    const rows = await db.query("SELECT * FROM users WHERE username = ?", [username]);
+    const [rows] = await db.execute("SELECT * FROM users WHERE username = ?", [username]);
 
     if (rows.length === 0) {
       return res.status(401).json({ msg: "Invalid username or password" });
@@ -281,14 +281,14 @@ app.post("/new_puzzle_session", async (req, res) => {
     db = await getDB();
 
     // Check if a session already exists for this user and puzzle
-    const existing = await db.query(
+    const [existing] = await db.execute(
       "SELECT * FROM puzzle_sessions WHERE username = ? AND puzzle_name = ?",
       [username, puzzle_name]
     );
 
     if (existing.length > 0) {
       // Update the existing session
-      await db.query(
+      await db.execute(
         `UPDATE puzzle_sessions
          SET game_data = ?
          WHERE username = ? AND puzzle_name = ?`,
@@ -296,7 +296,7 @@ app.post("/new_puzzle_session", async (req, res) => {
       );
     } else {
       // Insert a new session
-      await db.query(
+      await db.execute(
         `INSERT INTO puzzle_sessions (username, puzzle_name, game_data)
          VALUES (?, ?, ?)`,
         [username, puzzle_name, JSON.stringify(game_data)]
@@ -336,7 +336,7 @@ app.post("/new_user", async (req, res) => {
       db = await getDB();
   
       // Check if username already exists
-      const existing = await db.query(
+      const [existing] = await db.execute(
         "SELECT * FROM users WHERE username = ?",
         [username]
       );
@@ -346,7 +346,7 @@ app.post("/new_user", async (req, res) => {
       }
   
       // Insert new user
-      await db.query(
+      await db.execute(
         "INSERT INTO users (username, password, role) VALUES (?, ?, ?)",
         [username, hashedPassword, role]
       );
@@ -379,7 +379,7 @@ app.delete('/old_puzzle_session', async (req, res) => {
   try {
     db = await getDB();
 
-    const rows = await db.query(
+    const [rows] = await db.execute(
       "SELECT game_data FROM puzzle_sessions WHERE username = ? AND puzzle_name = ?",
       [username, puzzle_name]
     );
@@ -390,7 +390,7 @@ app.delete('/old_puzzle_session', async (req, res) => {
 
     const gameData = rows[0].game_data;
 
-    await db.query(
+    await db.execute(
       "DELETE FROM puzzle_sessions WHERE username = ? AND puzzle_name = ?",
       [username, puzzle_name]
     );
