@@ -41,7 +41,7 @@
    * @param {string} gameData - JSON string of the saved game data
    */
   function loadGameFromData(gameData) {
-    const game_data = JSON.parse(gameData);
+    const game_data = gameData;
     boardState = game_data.board;
     currentPlayer = game_data.currentPlayer;
     cells.forEach((cell, index) => {

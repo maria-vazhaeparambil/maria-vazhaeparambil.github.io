@@ -48,7 +48,7 @@
    * @param {string} gameData - JSON string of the saved game data
    */
   function loadGameFromData(gameData) {
-    const game_data = JSON.parse(gameData);
+    const game_data = gameData;
     board = game_data.board;
     currentPlayer = game_data.currentPlayer;
     matchedPairs = game_data.matchedPairs;

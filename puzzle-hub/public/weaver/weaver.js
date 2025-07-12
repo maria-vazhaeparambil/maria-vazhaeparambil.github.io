@@ -45,7 +45,7 @@
      * @param {object} gameData - JSON string of the saved game data
      */
     function loadGameFromData(gameData){
-        const game_data = JSON.parse(gameData);
+        const game_data = gameData;
         const board = game_data.board;
         const grid = document.querySelector(".weaver-grid");
         grid.innerHTML = ""; // Clear existing board

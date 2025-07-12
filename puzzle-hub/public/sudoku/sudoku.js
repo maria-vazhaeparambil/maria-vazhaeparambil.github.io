@@ -529,7 +529,7 @@
    * @param {string} gameData - JSON string of the saved game data
    */
   function loadGameFromData(gameData) {
-    const game_data = JSON.parse(gameData);
+    const game_data = gameData;
     board = game_data.board.map(row => row.map(val => ({ value: Number(val), candidates: [] })));
     solution = game_data.solution;
     given = game_data.given;
