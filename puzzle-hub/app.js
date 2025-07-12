@@ -57,7 +57,6 @@ async function getDB() {
         ca: fs.readFileSync(caPath)
       }
     });
-    console.log(db);
     return db;
   } catch (err) {
     if (DEBUG){
@@ -87,7 +86,9 @@ app.get("/puzzle_list", async (req, res, next) => {
       
     });
     res.json(jsonResponse);
+    console.log("Returning puzzles:", jsonResponse);
   } catch (error) {
+    console.log("Returning puzzles:", jsonResponse);
     console.log(process.env.DB_HOST);
     console.log(process.env.DB_PORT);
     console.log(process.env.DB_USER);
