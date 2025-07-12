@@ -82,7 +82,7 @@ app.get("/puzzle_list", async (req, res, next) => {
     let jsonResponse = rows.map(row => {
       return {"puzzle_name": row.puzzle_name, "puzzle_img": row.puzzle_img, 
               "puzzle_url": row.puzzle_url, "solver_url": row.solver_url, 
-              "puzzle_type": row.puzzle_type, "play_solve": row.playsolve};
+              "puzzle_type": row.puzzle_type, "play_solve": Number(row.playsolve)};
       
     });
     res.json(jsonResponse);
