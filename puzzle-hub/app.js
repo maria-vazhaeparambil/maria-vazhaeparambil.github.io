@@ -43,11 +43,6 @@ const bcrypt = require("bcrypt"); // assuming you hash passwords
 
 async function getDB() {
   try {
-    console.log(process.env.DB_HOST);
-    console.log(process.env.DB_PORT);
-    console.log(process.env.DB_USER);
-    console.log(process.env.DB_PASSWORD);
-    console.log(process.env.DB_NAME);
     const db = await mysql.createConnection({
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
@@ -77,6 +72,7 @@ async function getDB() {
 app.get("/puzzle_list", async (req, res, next) => {
   let db;
   try {
+    console.log("Fetching puzzle list");
     db = await getDB();
     console.log(db);
     let qry = "SELECT * FROM puzzle_list";
