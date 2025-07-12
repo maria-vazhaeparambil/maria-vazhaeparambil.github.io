@@ -45,7 +45,6 @@ async function getDB() {
   try {
     const path = require("path");
     const caPath = path.join(__dirname, "ca.pem"); // resolves to full path
-    console.log("CA file exists:", fs.existsSync(caPath));
     
     const db = await mysql.createConnection({
       host: process.env.DB_HOST,
@@ -87,12 +86,8 @@ app.get("/puzzle_list", async (req, res, next) => {
       
     });
     res.json(jsonResponse);
+    console.log("Returning puzzles:", jsonResponse);
   } catch (error) {
-    console.log(process.env.DB_HOST);
-    console.log(process.env.DB_PORT);
-    console.log(process.env.DB_USER);
-    console.log(process.env.DB_PASSWORD);
-    console.log(process.env.DB_NAME);
     res.status(SERVER_ERR_CODE).json({"msg": SERVER_ERROR});
   }
   if (db) { // otherwise if error, then db not defined
