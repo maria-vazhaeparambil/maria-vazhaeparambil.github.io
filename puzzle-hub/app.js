@@ -72,6 +72,7 @@ app.get("/puzzle_list", async (req, res, next) => {
   let db;
   try {
     db = await getDB();
+    console.log(db);
     let qry = "SELECT * FROM puzzle_list";
     let rows = await db.query(qry);
     let jsonResponse = rows.map(row => {
