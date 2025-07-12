@@ -46,9 +46,10 @@ async function getDB() {
     const path = require("path");
     const caPath = path.join(__dirname, "ca.pem"); // resolves to full path
     console.log("CA file exists:", fs.existsSync(caPath));
+    
     const db = await mysql.createConnection({
       host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
+      port: Number(process.env.DB_PORT),
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
@@ -62,6 +63,7 @@ async function getDB() {
     if (DEBUG){
       console.error("Database connection failed:", err.message);
     }
+    console.error("Database connection failed:", err.message);
     throw err;
   }
 }
@@ -76,7 +78,6 @@ app.get("/puzzle_list", async (req, res, next) => {
   try {
     console.log("Fetching puzzle list");
     db = await getDB();
-    console.log(db);
     let qry = "SELECT * FROM puzzle_list";
     let rows = await db.query(qry);
     let jsonResponse = rows.map(row => {
@@ -86,9 +87,7 @@ app.get("/puzzle_list", async (req, res, next) => {
       
     });
     res.json(jsonResponse);
-    console.log("Returning puzzles:", jsonResponse);
   } catch (error) {
-    console.log("Returning puzzles:", jsonResponse);
     console.log(process.env.DB_HOST);
     console.log(process.env.DB_PORT);
     console.log(process.env.DB_USER);
