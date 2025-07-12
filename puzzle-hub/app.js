@@ -59,7 +59,6 @@ async function getDB() {
         ca: fs.readFileSync("ca.pem")
       }
     });
-    console.log("2");
     console.log(db);
     return db;
   } catch (err) {
@@ -90,6 +89,11 @@ app.get("/puzzle_list", async (req, res, next) => {
     });
     res.json(jsonResponse);
   } catch (error) {
+    console.log(process.env.DB_HOST);
+    console.log(process.env.DB_PORT);
+    console.log(process.env.DB_USER);
+    console.log(process.env.DB_PASSWORD);
+    console.log(process.env.DB_NAME);
     res.status(SERVER_ERR_CODE).json({"msg": SERVER_ERROR});
   }
   if (db) { // otherwise if error, then db not defined
