@@ -88,6 +88,7 @@
      */
     function loadGameFromData(gameData){
         const game_data = JSON.parse(gameData);
+        console.log(game_data);
         board = game_data.board;
         word = game_data.solution;
         currentRow = game_data.board.findIndex(row => row.every(cell => cell === ""));
