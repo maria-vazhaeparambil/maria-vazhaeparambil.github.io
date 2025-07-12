@@ -78,7 +78,7 @@ app.get("/puzzle_list", async (req, res, next) => {
     console.log("Fetching puzzle list");
     db = await getDB();
     let qry = "SELECT * FROM puzzle_list";
-    let rows = await db.query(qry);
+    let rows = await db.execute(qry);
     let jsonResponse = rows.map(row => {
       return {"puzzle_name": row.puzzle_name, "puzzle_img": row.puzzle_img, 
               "puzzle_url": row.puzzle_url, "solver_url": row.solver_url, 
