@@ -88,20 +88,17 @@
     try {
       const resp = await fetch("/puzzle_list");
       const puzzles = await resp.json();
-      console.log(puzzles);
-
-      if (Array.isArray(puzzles)) {
-        puzzles.forEach(puzzle => {
-          const card = createPuzzleCard(puzzle, 0);
-          playList.appendChild(card);
-          if (puzzle.play_solve === 1) {
-            const solveCard = createPuzzleCard(puzzle, 1);
-            solveList.appendChild(solveCard);
-          }
-        });
-      } else {
-        console.error("Unexpected puzzle data:", puzzles);
-      }
+  
+      puzzles.forEach(puzzle => {
+        const card = createPuzzleCard(puzzle, 0);
+        playList.appendChild(card);
+  
+        if (puzzle.play_solve === 1) {
+          const solveCard = createPuzzleCard(puzzle, 1);
+          solveList.appendChild(solveCard);
+          // Do NOT unhide solveList or solveHeading here
+        }
+      });
   
       // Do not unhide solve section here — keep hidden by default
     } catch (err) {

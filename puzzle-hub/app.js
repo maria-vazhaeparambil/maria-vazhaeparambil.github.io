@@ -71,7 +71,9 @@ async function getDB() {
 app.get("/puzzle_list", async (req, res, next) => {
   let db;
   try {
+    console.log("1");
     db = await getDB();
+    console.log("2");
     console.log(db);
     let qry = "SELECT * FROM puzzle_list";
     let rows = await db.query(qry);
