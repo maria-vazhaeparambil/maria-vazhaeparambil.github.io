@@ -43,6 +43,9 @@ const bcrypt = require("bcrypt"); // assuming you hash passwords
 
 async function getDB() {
   try {
+    const path = require("path");
+    const caPath = path.join(__dirname, "ca.pem"); // resolves to full path
+    console.log("CA file exists:", fs.existsSync(caPath));
     const db = await mysql.createConnection({
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
@@ -51,7 +54,7 @@ async function getDB() {
       database: process.env.DB_NAME,
       ssl: {
         rejectUnauthorized: true,
-        ca: fs.readFileSync("ca.pem")
+        ca: fs.readFileSync(caPath)
       }
     });
     console.log(db);
